@@ -13,41 +13,42 @@
     <link href="//fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
     <link href="{{ elixir('css/app.css') }}" rel="stylesheet" type="text/css">
 
-    @if(env('GOOGLE_TRACKING_CODE'))<script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    @if(env('GOOGLE_TRACKING_CODE'))
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                            (i[r].q = i[r].q || []).push(arguments)
+                        }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-        ga('create', '{{ env('GOOGLE_TRACKING_CODE') }}', 'auto');
-        ga('require', 'linkid');
-        ga('send', 'pageview');
-    </script>@endif
+            ga('create', '{{ env('GOOGLE_TRACKING_CODE') }}', 'auto');
+            ga('require', 'linkid');
+            ga('send', 'pageview');
+        </script>@endif
 </head>
 <body>
 <div class="container-fixed">
     <header role="banner">
-        <div class="containerCentered">
+        <nav class="main-menu" id="main-nav" role="navigation">
             <a href="/" class="img-logo">PostalCache</a>
-
-            <nav class="main-menu" id="main-nav" role="navigation">
-                <ul>
-                    <li>
-                        <a href="/about">About Us</a>
-                    </li>
-                    <li>
-                        <a href="/promise">Our Promise</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="header-buttons">
-                <a href="{{ env('URL_LOGIN') }}" class="btn">Log In</a>
-                <a href="{{ env('URL_REGISTER') }}" class="btn">Sign Up</a>
-            </div>
-        </div>
+            <ul>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/faqs">FAQs</a></li>
+            </ul>
+            <ul class="right">
+                <li><a href="{{ env('URL_LOGIN') }}">Portal</a></li>
+            </ul>
+        </nav>
     </header>
 </div>
-<main class="@yield('page')">
+<main>
     <div class="container">
         <div class="content">
             @yield('content')

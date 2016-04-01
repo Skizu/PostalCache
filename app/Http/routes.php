@@ -11,4 +11,23 @@
 |
 */
 
+
+Route::controller('blog', 'BlogController', [
+    'getIndex' => 'blog.index',
+    'getArticle' => 'blog.article',
+    'postSearch' => 'blog.search',
+    'getSearch' => 'blog.search.show'
+]);
+Route::controller('faqs', 'FaqsController', [
+    'getIndex' => 'faqs.index',
+    'getArticle' => 'faqs.article',
+    'postSearch' => 'faqs.search',
+    'getSearch' => 'faqs.search.show'
+]);
+Route::controller('articles', 'ArticleController', [
+    'getIndex' => 'articles.index',
+    'getArticle' => 'articles.article',
+    'postSearch' => 'articles.search',
+    'getSearch' => 'articles.search.show'
+]);
 Route::controller('/', 'GuestController');
