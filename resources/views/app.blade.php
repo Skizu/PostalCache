@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" href="/favicon-48x48.png" sizes="48x48">
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
 
-    <link href="//fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet" type="text/css">
     <link href="{{ elixir('css/app.css') }}" rel="stylesheet" type="text/css">
 
     @if(env('GOOGLE_TRACKING_CODE'))

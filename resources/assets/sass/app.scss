@@ -34,7 +34,7 @@ body {
   width: 100%;
   color: $font_colour;
   display: table;
-  font-weight: 100;
+  font-weight: 400;
   font-family: $lato;
   background: $background center;
   background-attachment: fixed;
@@ -43,7 +43,6 @@ body {
 a {
   font-size: inherit;
   line-height: inherit;
-  font-weight: bold;
   color: $link_colour;
   text-decoration: none;
 }
@@ -94,7 +93,6 @@ header {
         padding-bottom: 5px;
         font-size: 16px;
         font-size: 1rem;
-        font-weight: 500;
         text-decoration: none;
         text-shadow: 0 0 3px $link_shadow;
         &:hover {
@@ -146,7 +144,6 @@ main {
   font-family: $title;
   font-size: 72px;
   margin-bottom: 20px;
-  font-weight: 400;
 }
 
 .slogan {
@@ -171,7 +168,6 @@ main {
   background: $button_colour;
   font-size: 15px;
   font-size: 1rem;
-  font-weight: bold;
   line-height: 1.4545em;
   color: $white;
   text-align: center;
