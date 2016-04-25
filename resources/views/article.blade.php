@@ -13,9 +13,9 @@
         {!! $article->get_content() !!}
 
         @if($article->get_categories())
-            <div>
+            <div class="tags">
                 @foreach($article->get_categories() as $tag)
-                    <a href="{{ route('articles.search', ['label:"'.$tag->get_term().'"']) }}">{{ $tag->get_term() }}</a>
+                    <a href="{{ route('articles.search', ['label:"'.$tag->get_term().'"']) }}">{{ $tag->get_term() }}</a>,
                 @endforeach
             </div>
         @endif

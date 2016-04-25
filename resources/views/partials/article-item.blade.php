@@ -6,13 +6,5 @@
 
     {!! $html !!}
 
-    @if($tags)
-        <div class="display-inline-block tags">
-            @foreach($tags as $tag)
-                <a href="{{ route('articles.search', ['label:"'.$tag->get_term().'"']) }}"
-                   class="label label-info">{{ $tag->get_term() }}</a>
-            @endforeach
-        </div>
-    @endif
-    <a href="{{ $link }}" class="btn btn-fifth">read more</a>
+    <div class="read-more"><a href="{{ $link }}" class="btn btn-fifth">read more</a></div>
 </article>

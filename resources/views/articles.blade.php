@@ -9,9 +9,7 @@
 
             <form method="POST" action="{{ route("$name.search") }}">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                <label for="search">Search</label>
-                <input name="search" id="search" type="search" placeholder="Search by subject"
-                       value="{{ $search or '' }}">
+                <input type="text" name="search" id="search" placeholder="Search by keywords" value="{{ $search or '' }}">
             </form>
         </header>
         <div class="boxes">

@@ -4,9 +4,8 @@
             'image' => str_replace('s72-c', "s$thumbnail_size-c", $article->get_enclosure()->get_thumbnail()),
             'title' => $article->get_title(),
             'datetime' => $article->get_date('Y-m-d h:i'),
-            'formatted_datetime' => $article->get_date('d M y'),
+            'formatted_datetime' => $article->get_date('D jS F Y'),
             'link' => route("$name.article", [substr(parse_url($article->get_permalink(), PHP_URL_PATH), 1)]),
-            'tags' => $article->get_categories(),
             'html' => str_limit($str = strip_tags($article->get_description(), '<br><br/>'),
                 (($len = strlen($str) < 400) ? $len : strpos($str, ' ', 400))
             )
